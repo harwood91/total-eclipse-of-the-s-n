@@ -19,20 +19,47 @@ get_header(); ?>
 
 			<div class="topSection">
 				<div class="container">
-					"Our aim is to promote  shops in Liverpool who don’t sell the s*n newspaper and persuade stores who do sell  to join them. "
+					<p class="quote">"Our aim is to promote shops in Liverpool who don’t sell the s*n newspaper and persuade stores who do sell to join them."</p>
 				</div>
 			</div>
 
 			<div class="homeAbout">
 				<div class="container">
 					<h1>Who are Total Eclipse of The S*n?</h1>
-					<p></p>
+					<div class="row">
+						<div class="col-sm-7">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas leo quis venenatis malesuada. Donec accumsan magna a iaculis pellentesque.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fringilla ultrices leo ut feugiat. Aenean condimentum turpis eget magna scelerisque,
+								scelerisque ultrices orci suscipit. Integer faucibus volutpat mauris ac cursus. Sed dapibus at urna vitae iaculis. Phasellus nec lacus non nibh
+								tincidunt iaculis non ac sem. Morbi non metus ut dui posuere condimentum. Praesent vel purus id diam porttitor gravida. Cras accumsan, nisl
+								nec aliquet fringilla, ligula turpis ornare augue, id vestibulum urna ipsum vel enim. Vivamus vestibulum suscipit ante ac lobortis. Proin
+								consectetur mi a augue iaculis viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+						<div class="col-sm-5">
+							<img src="http://placehold.it/300x200">
+						</div>
+					</div>
+
 				</div>
 			</div>
 
 			<div class="homeWhy">
 				<div class="container">
 					<h1>Why should you join our campaign?</h1>
+					<div class="row">
+						<div class="col-sm-7">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas leo quis venenatis malesuada. Donec accumsan magna a iaculis pellentesque.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fringilla ultrices leo ut feugiat. Aenean condimentum turpis eget magna scelerisque,
+								scelerisque ultrices orci suscipit. Integer faucibus volutpat mauris ac cursus. Sed dapibus at urna vitae iaculis. Phasellus nec lacus non nibh
+								tincidunt iaculis non ac sem. Morbi non metus ut dui posuere condimentum. Praesent vel purus id diam porttitor gravida. Cras accumsan, nisl
+								nec aliquet fringilla, ligula turpis ornare augue, id vestibulum urna ipsum vel enim. Vivamus vestibulum suscipit ante ac lobortis. Proin
+								consectetur mi a augue iaculis viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+						<div class="col-sm-5">
+							<img src="http://placehold.it/300x200">
+						</div>
+					</div>
+
 				</div>
 			</div>
 
