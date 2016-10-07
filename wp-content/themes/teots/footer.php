@@ -14,11 +14,20 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'teots' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'teots' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'teots' ), 'teots', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<!--<img src="<?php bloginfo('stylesheet_directory'); ?>/img/teots-logo.png">-->
+				</div>
+				<div class="col-sm-4">
+					<h3>Follow us on Facebook and Twitter</h3>
+
+				</div>
+				<div class="col-sm-4">
+
+				</div>
+			</div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
