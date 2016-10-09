@@ -101,7 +101,7 @@ get_header(); ?>
 			<div class="homeMedia">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-8">
+						<div class="col-sm-5">
 							<div class="latestNews">
 								<h2>Latest News</h2>
 
@@ -130,9 +130,22 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-4">
-							<div class="twitterFeed">
-								<h2>Twitter</h2>
+						<div class="col-sm-7">
+                            
+                            <div class="socialMedia">
+                                <h2>Social Media</h2>
+                            <p>Please view our social media pages below. The best way to increase awareness and support to our campaign are through the various avenues below so please consider following us on Twitter and Liking our Facebook page to keep up to date with the campaign! Thank you.</p>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                <h3>Facebook</h3>
+                                    
+                                    <?php get_sidebar('facebook'); ?>
+                                    
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="twitterFeed">
+								<h3>Twitter</h3>
 
 								<div class="main-twitter">
 
@@ -156,8 +169,8 @@ get_header(); ?>
 
 								</div>
 							</div>
-
-						</div>
+                            </div>
+                        </div>
 					</div>
 				</div>
 			</div>

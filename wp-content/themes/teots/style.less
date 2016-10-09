@@ -2,6 +2,10 @@ p, h1, h2, h3{
   font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    margin-bottom:100px;
+}
+
 a.teotsButton {
   background-color: #ff0000;
   border-color: #DF0101;
@@ -170,39 +174,30 @@ div.homeMedia{
 
     }
   }
+}
 
-  div.twitterFeed {
+div.socialMedia {
     text-align: center;
     background-color: #FFFF01;
     padding: 10px;
     border-radius: 10px;
     border: solid 2px #000000;
-
-    h2 {
+    
+    h2, h3 {
+        text-align: center;
       text-decoration: underline;
       color:#ff0000;
       font-weight: bold;
     }
-
-    p {
-
-
-      a {
-        color:#ff0000;
-        font-weight: bold;
-
-        &:hover{
-          text-decoration: underline;
-        }
-
-      }
-
-    }
-
-  }
-
+    
 }
 
 footer {
   background-color: #000000;
+    position:fixed;
+    height:100px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin-bottom:0px;
 }

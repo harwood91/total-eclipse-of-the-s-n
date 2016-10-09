@@ -19,6 +19,13 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <script src="https://use.fontawesome.com/5df7820823.js"></script>
+    
+    <!-- Google Maps API -->
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1fiJz0MgmxyHASkZk25GEr5pztoNsrrA"
+    async defer></script>-->
 
 <?php wp_head(); ?>
 </head>
@@ -31,12 +38,12 @@
 			<img src="<?php bloginfo('stylesheet_directory'); ?>/img/teots-logo.png">
 			<ul class="navigation">
 				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">News</a></li>
-				<li><a href="#">Supporters</a></li>
+				<li><a href="/about">About</a></li>
+				<li><a href="/news">News</a></li>
+				<li><a href="/supporters">Supporters</a></li>
 				<li><a href="#">Shop</a></li>
-				<li><a href="#">The Team</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="/team">The Team</a></li>
+				<li><a href="/contact">Contact</a></li>
 			</ul>
 		</div>
 	</div>

@@ -10,40 +10,27 @@ get_header(); ?>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
 
-            <?php
-            if ( have_posts() ) :
+            <div id="map_canvas" style="height: 354px; width:713px;"></div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1fiJz0MgmxyHASkZk25GEr5pztoNsrrA&v=3.exp&sensor=false&callback=initialize"></script>
+            <script>
+            var directionsDisplay,
+                directionsService,
+                map;
 
-                if ( is_home() && ! is_front_page() ) : ?>
-                    <header>
-                        <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-                    </header>
+            function initialize() {
+              var directionsService = new google.maps.DirectionsService();
+              directionsDisplay = new google.maps.DirectionsRenderer();
+              var chicago = new google.maps.LatLng(41.850033, -87.6500523);
+              var mapOptions = { zoom:7, mapTypeId: google.maps.MapTypeId.ROADMAP, center: chicago }
+              map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+              directionsDisplay.setMap(map);
+            }
 
-                    <?php
-                endif;
-
-                /* Start the Loop */
-                while ( have_posts() ) : the_post();
-
-                    /*
-                     * Include the Post-Format-specific template for the content.
-                     * If you want to override this in a child theme, then include a file
-                     * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-                     */
-                    get_template_part( 'template-parts/content', get_post_format() );
-
-                endwhile;
-
-                the_posts_navigation();
-
-            else :
-
-                get_template_part( 'template-parts/content', 'none' );
-
-            endif; ?>
+            </script>
 
         </main><!-- #main -->
     </div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
