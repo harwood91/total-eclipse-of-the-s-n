@@ -24,8 +24,7 @@
     <script src="https://use.fontawesome.com/5df7820823.js"></script>
     
     <!-- Google Maps API -->
-    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1fiJz0MgmxyHASkZk25GEr5pztoNsrrA"
-    async defer></script>-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1fiJz0MgmxyHASkZk25GEr5pztoNsrrA"></script>
 
 <?php wp_head(); ?>
 </head>

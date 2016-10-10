@@ -105,7 +105,7 @@ get_header(); ?>
 							<div class="latestNews">
 								<h2>Latest News</h2>
 
-								<div class="news">
+								<div class="news clearfix">
 									<img src="http://placehold.it/150x150">
 									<h4>News Title</h4>
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas leo quis venenatis malesuada. Donec accumsan magna a iaculis pellentesque.
@@ -113,7 +113,7 @@ get_header(); ?>
 									<a class="btn btn-primary teotsButton" href="#">Read More</a>
 								</div>
 
-								<div class="news">
+								<div class="news clearfix">
 									<img src="http://placehold.it/150x150">
 									<h4>News Title</h4>
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas leo quis venenatis malesuada. Donec accumsan magna a iaculis pellentesque.
@@ -121,7 +121,7 @@ get_header(); ?>
 									<a class="btn btn-primary teotsButton" href="#">Read More</a>
 								</div>
 
-								<div class="news">
+								<div class="news clearfix">
 									<img src="http://placehold.it/150x150">
 									<h4>News Title</h4>
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas leo quis venenatis malesuada. Donec accumsan magna a iaculis pellentesque.
