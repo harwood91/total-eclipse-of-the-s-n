@@ -3,11 +3,12 @@
  */
 $(function(){
     if ($('#map').length > 0) {
-        google.maps.event.addDomListener(window, 'load', initialiseMap(false));
+        var supporters = $('#json').data('json');
+        google.maps.event.addDomListener(window, 'load', initialiseMap(supporters, true, true, true, true));
     }
 });
 
-function initialiseMap(sellers){
+function initialiseMap(supporters, shops, collectionPoints, garages, councils){
 
     var isDraggable = $(document).width() > 480 ? true : false;
 
@@ -19,78 +20,83 @@ function initialiseMap(sellers){
         }
     ];
 
-    // What it needs to be
-    // Name, Lat, Lng, Image, desc, isSeller
-
-    var locations = [
-        ['Everton Park 1', '53.422560', '-2.973891', true],
-        ['Everton Park 2', '53.423017', '-2.971793', false],
-        ['Everton Park 3', '53.422579', '-2.970114', true],
-        ['Everton Park 4', '53.421169', '-2.971364', true],
-        ['Everton Park 5', '53.418836', '-2.971103', false],
-        ['Everton Park 6', '53.417293', '-2.969578', false],
-        ['Everton Park 7', '53.414697', '-2.968231', false],
-        ['Islington 1', '53.412014', '-2.966279', false],
-        ['Islington 2', '53.411985', '-2.969658', false]
-    ];
-
-    var latlng = calculateCenter(locations);
-
     var mapOptions = {
         draggable: isDraggable,
         scrollwheel: false,
-        center: { lat: latlng[0], lng: latlng[1]},
-        zoom: 14,
+        center: { lat: 53.408326, lng: -2.991396},
+        zoom: 12,
         styles: styles
     };
 
     var map = new google.maps.Map(document.getElementById('map'),
         mapOptions);
 
-    var myLatlng = new google.maps.LatLng(53.405620,-2.876202);
-
     var infowindow = new google.maps.InfoWindow();
 
     var marker, i;
 
-    for (i = 0; i < locations.length; i++) {
+    for(i = 0; i < supporters.length; i++) {
+      if(shops == true){
+        if(supporters[i].isShop == true){
+          marker = new google.maps.Marker({
+              position: new google.maps.LatLng(supporters[i].lat, supporters[i].lng),
+              map: map,
+              title: supporters[i].name
+          });
 
-        if(sellers == true){
-            if(locations[i][3] == true){
-                marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-                    map: map,
-                    title: locations[i][0]
-                });
+          google.maps.event.addListener(marker, 'click', (function(marker, i) {
+              return function() {
+                  infowindow.setContent(supporters[i].name);
+                  infowindow.open(map, marker);
+              }
+          })(marker, i));
 
-                google.maps.event.addListener(marker, 'click', (function(marker, i) {
-                    return function() {
-                        infowindow.setContent(locations[i][0]);
-                        infowindow.open(map, marker);
-                    }
-                })(marker, i));
-            }
-        } else {
-            marker = new google.maps.Marker({
-                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-                map: map,
-                title: locations[i][0]
-            });
-
-            google.maps.event.addListener(marker, 'click', (function(marker, i) {
-                return function() {
-                    infowindow.setContent(locations[i][0]);
-                    infowindow.open(map, marker);
-                }
-            })(marker, i));
         }
-    }
+      } else {
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(supporters[i].lat, supporters[i].lng),
+            map: map,
+            title: supporters[i].name
+        });
 
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+                infowindow.setContent(supporters[i].name);
+                infowindow.open(map, marker);
+            }
+        })(marker, i));
+      }
+    }
 }
 
 $(document).on('click', '#sellers', function(e){
     e.preventDefault();
-    initialiseMap(true);
+    var supporters = $('#json').data('json');
+    initialiseMap(supporters, true, true, true, true);
+});
+
+$(document).on('change', '.mapCheckbox', function(e){
+    e.preventDefault();
+    var supporters = $('#json').data('json');
+    var shopping = false, collection = false, garage = false, council = false;
+
+    if(document.getElementById('checkbox-shopping').checked){
+      shopping = true;
+    }
+
+    if(document.getElementById('checkbox-collection').checked){
+      collection = true;
+    }
+
+    if(document.getElementById('checkbox-garage').checked){
+      garage = true;
+    }
+
+    if(document.getElementById('checkbox-council').checked){
+      council = true;
+    }
+
+    initialiseMap(supporters, shopping, collection, garage, council);
 });
 
 function calculateCenter(locations){
