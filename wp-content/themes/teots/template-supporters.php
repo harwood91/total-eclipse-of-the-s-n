@@ -47,7 +47,7 @@ get_header(); ?>
           <div class="supportersMap">
             <div class="container">
               <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-5">
 
                   <div class="mapOptions">
 
@@ -57,7 +57,8 @@ get_header(); ?>
                       <p>Our shop supporters are shops which have joined our campaign
                         and vowed not to sell The S*n. If you can please shop at one
                         of these stores! Thank you.</p>
-                        <input type="checkbox" class="mapCheckbox" id="checkbox-shopping" checked="checked"> Show on Map
+                        <input type="checkbox" class="mapCheckbox" id="checkbox-shopping" checked="checked">
+                        <label for="checkbox-shopping">Show Shops</label>
                     </div>
 
                     <div class="mapOption" id="collection">
@@ -66,7 +67,8 @@ get_header(); ?>
                       <p>Our collection points are places who are helping
                         support us by selling stickers and posters to anyone
                         who would like to spread the word!</p>
-                        <input type="checkbox" class="mapCheckbox" id="checkbox-collection" checked="checked"> Show on Map
+                        <input type="checkbox" class="mapCheckbox" id="checkbox-collection" checked="checked">
+                        <label for="checkbox-collection">Show Collection Points</label>
                     </div>
 
                     <div class="mapOption" id="garage">
@@ -74,7 +76,8 @@ get_header(); ?>
                       <i class="fa fa-taxi" aria-hidden="true"></i>
                       <p>Our petrol station supporters are petrol stations which have vowed not to sell The S*n.
                           If you need to fill up your car try to use one of these stations!</p>
-                          <input type="checkbox" class="mapCheckbox" id="checkbox-garage" checked="checked"> Show on Map
+                          <input type="checkbox" class="mapCheckbox" id="checkbox-garage" checked="checked">
+                          <label for="checkbox-garage">Show Petrol Stations</label>
                     </div>
 
                     <div class="mapOption" id="council">
@@ -82,17 +85,45 @@ get_header(); ?>
                       <i class="fa fa-building" aria-hidden="true"></i>
                       <p>Our council supporters are councils who have backed our campaign and have
                         asked public council run servies not to sell The S*n.</p>
-                        <input type="checkbox" class="mapCheckbox" id="checkbox-council" checked="checked"> Show on Map
+                        <input type="checkbox" class="mapCheckbox" id="checkbox-council" checked="checked">
+                        <label for="checkbox-council">Show Councils</label>
                     </div>
 
                   </div>
 
                 </div>
-                <div class="col-sm-8">
-                  <div id="map" style="height: 354px; width:713px;"></div>
+                <div class="col-sm-7">
+                  <div class="mapContainer">
+                    <div id="map"></div>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+
+          <div class="supportersTaxis">
+            <div class="container">
+
+              <h2>Penny for the Fleet!</h2>
+
+              <div class="row">
+                <div class="col-sm-8">
+                  <p>After having an amazing success with our facebook "penny for the fleet" campaign, where we raised enough money to wrap 8 taxis with our campaign message. </p>
+                  <p>Since then, we have further finaced another 19 proud hackneys.
+                    We are now aiming to wrap 96! We have 96 reasons to do this, we hope you will join in a worthy cause, to spread the message further and faster, to every city in the nation.
+                    The message is clear #SunNotWelcomeHere </p>
+
+                  <p>To help us raise funds to wrap 96 taxis please visit our <a class="link" href="http://www.crowdfunder.co.uk/penny-for-the-fleet/?">Penny for the Fleet Crowdfunder page</a> to find out more!</p>
+
+                  <a href="http://www.crowdfunder.co.uk/penny-for-the-fleet/?" class="btn btn-primary teotsButton">Penny for the Fleet Crowdfunder page</a>
+
+                </div>
+                <div class="col-sm-4">
+                  <img src="http://placehold.it/350x150">
+                </div>
+              </div>
+            </div>
+
           </div>
 
 

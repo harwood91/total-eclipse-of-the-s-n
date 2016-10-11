@@ -36,8 +36,8 @@ function initialiseMap(supporters, shops, collectionPoints, garages, councils){
     var marker, i;
 
     for(i = 0; i < supporters.length; i++) {
-      if(shops == true){
-        if(supporters[i].isShop == true){
+
+        if(supporters[i].isShop == shops && shops == true){
           marker = new google.maps.Marker({
               position: new google.maps.LatLng(supporters[i].lat, supporters[i].lng),
               map: map,
@@ -50,23 +50,48 @@ function initialiseMap(supporters, shops, collectionPoints, garages, councils){
                   infowindow.open(map, marker);
               }
           })(marker, i));
+        } else if(supporters[i].isCollectionPoint == collectionPoints && collectionPoints == true){
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(supporters[i].lat, supporters[i].lng),
+                map: map,
+                title: supporters[i].name
+            });
 
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                    infowindow.setContent(supporters[i].name);
+                    infowindow.open(map, marker);
+                }
+            })(marker, i));
+        } else if(supporters[i].isGarage == garages && garages == true){
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(supporters[i].lat, supporters[i].lng),
+                map: map,
+                title: supporters[i].name
+            });
+
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                    infowindow.setContent(supporters[i].name);
+                    infowindow.open(map, marker);
+                }
+            })(marker, i));
+        } else if(supporters[i].isCouncil == councils && councils == true){
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(supporters[i].lat, supporters[i].lng),
+                map: map,
+                title: supporters[i].name
+            });
+
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                    infowindow.setContent(supporters[i].name);
+                    infowindow.open(map, marker);
+                }
+            })(marker, i));
         }
-      } else {
-        marker = new google.maps.Marker({
-            position: new google.maps.LatLng(supporters[i].lat, supporters[i].lng),
-            map: map,
-            title: supporters[i].name
-        });
-
-        google.maps.event.addListener(marker, 'click', (function(marker, i) {
-            return function() {
-                infowindow.setContent(supporters[i].name);
-                infowindow.open(map, marker);
-            }
-        })(marker, i));
-      }
     }
+
 }
 
 $(document).on('click', '#sellers', function(e){
