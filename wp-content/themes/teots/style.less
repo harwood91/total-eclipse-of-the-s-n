@@ -205,6 +205,58 @@ div.socialMedia {
 
 // News Page
 
+div.newsMain {
+  padding: 40px 0;
+  background-color: #FFFFFF;
+
+
+}
+
+div.newsSection {
+  padding: 40px 0;
+  background-color: #F2F2F2;
+
+  div.blog-item {
+    position: relative;
+
+    img {
+      border: solid 2px #ff0000;
+    }
+
+    div.blog-item-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+
+      padding: 10px;
+      color: #ffffff;
+      background-color: #ff0000;
+
+      a {
+        color: #ffffff;
+      }
+    }
+
+    &:hover {
+      img {
+        border-color: #ffff01;
+      }
+
+      div.blog-item-link {
+        color: #000000;
+        background-color: #ffff01;
+
+        a {
+          color: #000000;
+        }
+      }
+
+
+    }
+
+  }
+}
 
 
 

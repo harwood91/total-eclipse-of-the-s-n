@@ -18,10 +18,10 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<div class="newsMain">
-				<h1>News</h1>
-
-				<p></p>
-
+				<div class="container">
+					<h1>News</h1>
+					<p>Below you can view all of our news articles.</p>
+				</div>
 			</div>
 
 			<div class="newsSection">
@@ -44,10 +44,7 @@ get_header(); ?>
 									<?php echo the_post_thumbnail('blog-thumbnail', array('class' => 'img-responsive') ); ?>
 								</a>
 								<div class="blog-item-link">
-									<div class="link">
-										[<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a>] [<?php the_time('d/m/y'); ?>]
-									</div>
-									<div class="tail"></div>
+										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a> [<?php the_time('d/m/y'); ?>]
 								</div>
 							</div>
 							<hr class="spacer-30"/>
