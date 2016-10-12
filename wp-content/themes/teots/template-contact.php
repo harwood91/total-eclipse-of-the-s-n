@@ -5,10 +5,38 @@
  * @package teots
  */
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $to = 'andrew@drawandcode.com';
+    $subject = 'email test';
+    $body = 'The email body content';
+    $headers = array('Content-Type: text/html; charset=UTF-8');
+
+    wp_mail( $to, $subject, $body, $headers );
+}
+
 get_header(); ?>
 
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
+
+            <div class="contactUs">
+                <h3>Contact Us</h3>
+                <form style="max-width: 100%" class="clearfix" action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="contactName" class="form-control" id="name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="message" rows="5" placeholder="Write your enquiry here"></textarea>
+                    </div>
+                    <button type="submit" value="submit" class="btn btn-default btn-cakes float-right">Submit Enquiry</button>
+                </form>
+            </div>
+
 
             <?php
             if ( have_posts() ) :
@@ -44,5 +72,4 @@ get_header(); ?>
     </div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
