@@ -67,7 +67,7 @@ get_header(); ?>
 								<?php $previous = get_previous_posts_link(); ?>
 								<?php if($previous): ?>
 									<div class="paging text-center">
-										<?php previous_posts_link( '[<strong>NEWER POSTS</strong>]' ); ?>
+										<?php previous_posts_link( '<strong><i class="fa fa-arrow-left" aria-hidden="true"></i> NEWER POSTS</strong>' ); ?>
 									</div>
 								<?php endif; ?>
 								<hr class="spacer-30"/>
@@ -76,7 +76,7 @@ get_header(); ?>
 								<?php $next = get_next_posts_link(); ?>
 								<?php if($next): ?>
 									<div class="paging text-center">
-										<?php next_posts_link( '[<strong>OLDER POSTS</strong>]' ); ?>
+										<?php next_posts_link( '<strong>OLDER POSTS <i class="fa fa-arrow-right" aria-hidden="true"></i></strong>' ); ?>
 									</div>
 								<?php endif; ?>
 								<hr class="spacer-30"/>

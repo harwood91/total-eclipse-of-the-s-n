@@ -32,18 +32,112 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 
-	<div class="header">
+	<div class="header clearfix">
 		<div class="container">
 			<img src="<?php bloginfo('stylesheet_directory'); ?>/img/teots-logo.png">
-			<ul class="navigation">
-				<li><a href="#">Home</a></li>
-				<li><a href="/about">About</a></li>
-				<li><a href="/news">News</a></li>
-				<li><a href="/supporters">Supporters</a></li>
-				<li><a href="#">Shop</a></li>
-				<li><a href="/team">The Team</a></li>
-				<li><a href="/contact">Contact</a></li>
-			</ul>
+
+			<div class="navWrapper">
+					<nav class="navbar navbar-default center">
+
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand visible-xs" href="#">Menu</a>
+						</div>
+
+
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<?php
+
+								if (is_home()) {
+									?>
+									<li><a class="current" href="/">Home</a></li>
+									<?php
+								}
+								else {
+									?>
+									<li><a href="/">Home</a></li>
+									<?php
+								}
+
+								if (strpos($_SERVER['REQUEST_URI'], '/about/') === 0) {
+									?>
+									<li><a class="current" href="/about/">About</a></li>
+									<?php
+								}
+								else {
+									?>
+									<li><a href="/about/">About</a></li>
+									<?php
+								}
+
+								if (strpos($_SERVER['REQUEST_URI'], '/news/') === 0) {
+									?>
+									<li><a class="current" href="/news/">News</a></li>
+									<?php
+								}
+								else {
+									?>
+									<li><a href="/news/">News</a></li>
+									<?php
+								}
+
+								if (strpos($_SERVER['REQUEST_URI'], '/supporters/') === 0) {
+									?>
+									<li><a class="current" href="/supporters/">Supporters</a></li>
+									<?php
+								}
+								else {
+									?>
+									<li><a href="/supporters/">Supporters</a></li>
+									<?php
+								}
+
+								if (strpos($_SERVER['REQUEST_URI'], '/shop/') === 0) {
+									?>
+									<li><a class="current" href="/shop/">Shop</a></li>
+									<?php
+								}
+								else {
+									?>
+									<li><a href="/shop/">Shop</a></li>
+									<?php
+								}
+
+								if (strpos($_SERVER['REQUEST_URI'], '/team/') === 0) {
+									?>
+									<li><a class="current" href="/team/">The Team</a></li>
+									<?php
+								}
+								else {
+									?>
+									<li><a href="/team/">The Team</a></li>
+									<?php
+								}
+
+								if (strpos($_SERVER['REQUEST_URI'], '/contact/') === 0) {
+									?>
+									<li><a class="current" href="/contact/">Contact</a></li>
+									<?php
+								}
+								else {
+									?>
+									<li><a href="/contact/">Contact</a></li>
+									<?php
+								}
+
+
+								?>
+							</ul>
+						</div><!-- /.navbar-collapse -->
+					</nav>
+			</div>
+
 		</div>
 	</div>
 
