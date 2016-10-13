@@ -44,7 +44,8 @@ get_header(); ?>
 									<?php echo the_post_thumbnail('blog-thumbnail', array('class' => 'img-responsive') ); ?>
 								</a>
 								<div class="blog-item-link">
-										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a> [<?php the_time('d/m/y'); ?>]
+											<span class="title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></span>
+											<span class="date">(<?php the_time('d/m/y'); ?>)</span>
 								</div>
 							</div>
 							<hr class="spacer-30"/>

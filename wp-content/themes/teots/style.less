@@ -352,8 +352,19 @@ div.newsSection {
       color: #ffffff;
       background-color: #ff0000;
 
-      a {
-        color: #ffffff;
+      span.title {
+        font-family: Montserrat,sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 0 10px 0 0;
+
+        a {
+          color: #ffffff;
+        }
+      }
+
+      span.date {
+          font-family: Montserrat,sans-serif;
       }
     }
 
@@ -366,8 +377,15 @@ div.newsSection {
         color: #000000;
         background-color: #ffff01;
 
-        a {
-          color: #000000;
+        span.title {
+          a {
+            color: #000000;
+            text-decoration: none;
+          }
+        }
+
+        span.date {
+
         }
       }
 
@@ -375,6 +393,28 @@ div.newsSection {
     }
 
   }
+}
+
+
+// Single News Page
+
+div.singlePost {
+  padding: 40px 0;
+  background-color: #FFFFFF;
+
+  h1 {
+    margin: 0 0 10px 0;
+  }
+
+  img {
+    border: solid 2px #ff0000;
+    float: left;
+  }
+
+  div.addthis_toolbox {
+    margin: 30px 0;
+  }
+
 }
 
 
