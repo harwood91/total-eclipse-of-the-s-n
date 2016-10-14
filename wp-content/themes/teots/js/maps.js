@@ -37,24 +37,12 @@ function initialiseMap(supporters, shops, collectionPoints, garages, councils){
 
     for(i = 0; i < supporters.length; i++) {
 
-        if(supporters[i].isShop == shops && shops == true){
-          marker = new google.maps.Marker({
-              position: new google.maps.LatLng(supporters[i].lat, supporters[i].lng),
-              map: map,
-              title: supporters[i].name
-          });
-
-          google.maps.event.addListener(marker, 'click', (function(marker, i) {
-              return function() {
-                  infowindow.setContent(supporters[i].name);
-                  infowindow.open(map, marker);
-              }
-          })(marker, i));
-        } else if(supporters[i].isCollectionPoint == collectionPoints && collectionPoints == true){
+        if(supporters[i].isCollectionPoint == collectionPoints && collectionPoints == true){
             marker = new google.maps.Marker({
                 position: new google.maps.LatLng(supporters[i].lat, supporters[i].lng),
                 map: map,
-                title: supporters[i].name
+                title: supporters[i].name,
+                icon: '../wp-content/themes/teots/img/markers/cp-map-marker.png'
             });
 
             google.maps.event.addListener(marker, 'click', (function(marker, i) {
@@ -67,7 +55,8 @@ function initialiseMap(supporters, shops, collectionPoints, garages, councils){
             marker = new google.maps.Marker({
                 position: new google.maps.LatLng(supporters[i].lat, supporters[i].lng),
                 map: map,
-                title: supporters[i].name
+                title: supporters[i].name,
+                icon: '../wp-content/themes/teots/img/markers/ps-map-marker.png'
             });
 
             google.maps.event.addListener(marker, 'click', (function(marker, i) {
@@ -80,7 +69,22 @@ function initialiseMap(supporters, shops, collectionPoints, garages, councils){
             marker = new google.maps.Marker({
                 position: new google.maps.LatLng(supporters[i].lat, supporters[i].lng),
                 map: map,
-                title: supporters[i].name
+                title: supporters[i].name,
+                icon: '../wp-content/themes/teots/img/markers/council-map-marker.png'
+            });
+
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                    infowindow.setContent(supporters[i].name);
+                    infowindow.open(map, marker);
+                }
+            })(marker, i));
+        } else if(supporters[i].isShop == shops && shops == true){
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(supporters[i].lat, supporters[i].lng),
+                map: map,
+                title: supporters[i].name,
+                icon: '../wp-content/themes/teots/img/markers/shop-map-marker.png'
             });
 
             google.maps.event.addListener(marker, 'click', (function(marker, i) {

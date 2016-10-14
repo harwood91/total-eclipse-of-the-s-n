@@ -9,7 +9,7 @@ p, h1, h2, h3{
 }
 
 body {
-    margin-bottom:100px;
+    //margin-bottom:100px;
 }
 
 .paging.text-center {
@@ -21,10 +21,6 @@ body {
   a {
     color: #ffffff;
 
-    &:hover{
-      text-decoration: none;
-      background-color: #df0101;
-    }
 
   }
 
@@ -408,11 +404,23 @@ div.singlePost {
 
   img {
     border: solid 2px #ff0000;
-    float: left;
   }
 
   div.addthis_toolbox {
     margin: 30px 0;
+  }
+
+  div.otherArticles{
+    margin: 20px 0;
+
+    div.panel {
+
+      div.panel-heading {
+        background-color: #ffff01;
+      }
+
+    }
+
   }
 
 }
@@ -627,10 +635,59 @@ div.contactForm {
 
 footer {
   background-color: #000000;
-    position:fixed;
-    height:100px;
-    bottom:0px;
-    left:0px;
-    right:0px;
-    margin-bottom:0px;
+  color: #ffffff;
+
+  h3 {
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  a {
+
+    i.fa {
+      display: inline-block;
+      color: #ffffff;
+      font-size: 32px !important;
+      margin: 20px;
+
+      &:hover {
+        color:#ffff01;
+      }
+    }
+
+  }
+
+  div.pageLinks {
+
+    padding: 20px 0;
+
+    ul {
+
+      list-style-type: none;
+
+      li {
+
+        display: inline-block;
+        float: left;
+        padding: 0 10px;
+        border-right: solid 1px #ffffff;
+
+        a {
+          color: #ffffff;
+          font-weight: bold;
+
+          &:hover {
+            text-decoration: none;
+            color: #ffff01;
+          }
+
+        }
+
+
+      }
+
+    }
+
+  }
+
 }

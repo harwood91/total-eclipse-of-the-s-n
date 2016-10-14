@@ -21,19 +21,19 @@ get_header(); ?>
 
             <div class="shopMain">
                 <div class="container">
-                    <?php
-                    while ( have_posts() ) : the_post();
+                    <div id="my-store-10291081"></div>
+                    <div>
+                        <script type="text/javascript" src="https://app.ecwid.com/script.js?10291081&data_platform=code&data_date=2016-10-14" charset="utf-8"></script><script type="text/javascript"> xProductBrowser("categoriesPerRow=3","views=grid(3,3) list(10) table(20)","categoryView=grid","searchView=list","id=my-store-10291081");</script>
+                    </div>
+                </div>
+            </div>
 
-                        the_content();
-                        //get_template_part( 'template-parts/content', get_post_format() );
-
-                        // If comments are open or we have at least one comment, load up the comment template.
-                        if ( comments_open() || get_comments_number() ) :
-                            comments_template();
-                        endif;
-
-                    endwhile; // End of the loop.
-                    ?>
+            <div class="shopBag">
+                <div class="container">
+                    <div id="my-cart-10291081"></div>
+                    <div>
+                        <script type="text/javascript" src="https://app.ecwid.com/script.js?10291081&data_platform=code&data_date=2016-10-14" charset="utf-8"></script>
+                        <!-- remove layout parameter if you want to position minicart yourself -->
                 </div>
             </div>
 
