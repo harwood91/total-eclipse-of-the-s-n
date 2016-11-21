@@ -511,6 +511,7 @@ div.supportersMap {
       padding: 10px;
       margin: 0 0 20px 0;
       border: solid 2px #000000;
+      opacity: 0.5;
 
       h4 {
         display: inline-block;
@@ -550,6 +551,14 @@ div.supportersMap {
       &#council {
         background-color: #ffffff;
         color: #000000;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.selected {
+        opacity: 1;
       }
 
 

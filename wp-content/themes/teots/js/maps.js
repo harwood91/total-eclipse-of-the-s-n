@@ -6,6 +6,26 @@ $(function(){
         var supporters = $('#json').data('json');
         google.maps.event.addDomListener(window, 'load', initialiseMap(supporters, true, true, true, true));
     }
+
+    $('.supporter-map').hide();
+
+    var map;
+    $('.mapOption').each(function(e){
+        if($(this).hasClass('selected')){
+            map = $(this).attr('id');
+            $('#' + map + '-map').show();
+        }
+    });
+
+    $(document).on('click', '.mapOption', function(e){
+        $('.mapOption').removeClass('selected');
+        $('.supporter-map').hide();
+
+        $(this).addClass('selected');
+        map = $(this).attr('id');
+        $('#' + map + '-map').show();
+    });
+
 });
 
 function initialiseMap(supporters, shops, collectionPoints, garages, councils){
