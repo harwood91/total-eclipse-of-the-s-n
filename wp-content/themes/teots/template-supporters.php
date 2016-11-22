@@ -89,27 +89,27 @@ get_header(); ?>
                         <label for="checkbox-council">Show Councils</label>
                     </div>-->
 
-                    <div class="mapOption selected" id="shop">
+                    <div class="mapOption selected" id="shop" data-src="1h49XLR__T8r1rUvHHCoV8yVm10o">
                       <h4>Shops</h4>
                       <p>Our shop supporters are shops which have joined our campaign
                         and vowed not to sell The S*n. If you can please shop at one
                         of these stores! Thank you.</p>
                     </div>
 
-                    <div class="mapOption" id="collection">
+                    <div class="mapOption" id="collection" data-src="1FjlbkfAV3-ZaHEc_8JCwefUF5vE">
                       <h4>Collection Points</h4>
                       <p>Our collection points are places who are helping
                         support us by selling stickers and posters to anyone
                         who would like to spread the word!</p>
                     </div>
 
-                    <div class="mapOption" id="garage">
+                    <div class="mapOption" id="garage" data-src="1M5RBQ6WXNLdgNvLVSdk_OH1NS-k">
                       <h4>Petrol Stations</h4>
                       <p>Our petrol station supporters are petrol stations which have vowed not to sell The S*n.
                         If you need to fill up your car try to use one of these stations!</p>
                     </div>
 
-                    <div class="mapOption" id="council">
+                    <div class="mapOption" id="council" data-src="1CWlgsNCdyuwZvN8WvkIDtHdjwto">
                       <h4>Councils</h4>
                       <p>Our council supporters are councils who have backed our campaign and have
                         asked public council run servies not to sell The S*n.</p>
@@ -121,14 +121,10 @@ get_header(); ?>
                 <div class="col-sm-7">
                   <div class="mapContainer">
                     <!--<div id="map"></div>-->
-                    <!-- Shop List -->
-                    <iframe class="supporter-map" id="shop-map" src="https://www.google.com/maps/d/embed?mid=1h49XLR__T8r1rUvHHCoV8yVm10o" width="640" height="480"></iframe>
-                    <!-- Garage List -->
-                    <iframe class="supporter-map" id="garage-map" src="https://www.google.com/maps/d/embed?mid=1FjlbkfAV3-ZaHEc_8JCwefUF5vE" width="640" height="480"></iframe>
-                    <!-- Collection Points -->
-                    <iframe class="supporter-map" id="collection-map" src="https://www.google.com/maps/d/embed?mid=1M5RBQ6WXNLdgNvLVSdk_OH1NS-k" width="640" height="480"></iframe>
-                    <!-- Councils -->
-                    <iframe class="supporter-map" id="council-map" src="https://www.google.com/maps/d/embed?mid=1CWlgsNCdyuwZvN8WvkIDtHdjwto" width="640" height="480"></iframe>
+                    <!-- Map -->
+                    <div class="supporter-map">
+                      <iframe id="supporter-map" src="https://www.google.com/maps/d/embed?mid=1h49XLR__T8r1rUvHHCoV8yVm10o" width="640" height="480"></iframe>
+                    </div>
                   </div>
                 </div>
               </div>

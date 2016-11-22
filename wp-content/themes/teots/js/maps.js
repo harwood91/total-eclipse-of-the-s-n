@@ -7,23 +7,20 @@ $(function(){
         google.maps.event.addDomListener(window, 'load', initialiseMap(supporters, true, true, true, true));
     }
 
-    $('.supporter-map').hide();
-
-    var map;
+    var map, src;
     $('.mapOption').each(function(e){
         if($(this).hasClass('selected')){
-            map = $(this).attr('id');
-            $('#' + map + '-map').show();
+            src = $(this).data('src');
+            $('#supporter-map').attr('src', 'https://www.google.com/maps/d/embed?mid=' + src);
         }
     });
 
     $(document).on('click', '.mapOption', function(e){
         $('.mapOption').removeClass('selected');
-        $('.supporter-map').hide();
 
         $(this).addClass('selected');
-        map = $(this).attr('id');
-        $('#' + map + '-map').show();
+        src = $(this).data('src');
+        $('#supporter-map').attr('src', 'https://www.google.com/maps/d/embed?mid=' + src);
     });
 
 });
