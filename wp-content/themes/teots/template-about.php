@@ -23,7 +23,7 @@ get_header(); ?>
                                 consectetur mi a augue iaculis viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
                         <div class="col-sm-4">
-                            <img src="http://placehold.it/300x200">
+                            <img class="img-responsive hidden-xs" src="http://placehold.it/300x200">
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@ get_header(); ?>
                             <a href="#" class="btn btn-primary teotsButton">Find Out More</a>
                         </div>
                         <div class="col-sm-4">
-                            <img src="http://placehold.it/300x200">
+                            <img class="img-responsive hidden-xs" src="http://placehold.it/300x200">
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@ get_header(); ?>
                             <a href="#" class="btn btn-primary teotsButton">The Team</a>
                         </div>
                         <div class="col-sm-4">
-                            <img src="http://placehold.it/300x200">
+                            <img class="img-responsive hidden-xs" src="http://placehold.it/300x200">
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@ get_header(); ?>
                             <a href="#" class="btn btn-primary teotsButton">Get Involved</a>
                         </div>
                         <div class="col-sm-4">
-                            <img src="http://placehold.it/300x200">
+                            <img class="img-responsive hidden-xs" src="http://placehold.it/300x200">
                         </div>
                     </div>
                 </div>

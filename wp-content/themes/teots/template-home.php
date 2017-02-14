@@ -29,7 +29,7 @@ get_header(); ?>
                                 consectetur mi a augue iaculis viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
                         <div class="col-sm-5">
-                            <img src="http://placehold.it/300x200">
+                            <img class="img-responsive hidden-xs" src="http://placehold.it/300x200">
                         </div>
                     </div>
 
@@ -51,7 +51,7 @@ get_header(); ?>
                                 Network to stop selling The S*n.</p>
                         </div>
                         <div class="col-sm-5">
-                            <img src="http://placehold.it/300x200">
+                            <img class="img-responsive hidden-xs" src="http://placehold.it/300x200">
                         </div>
                     </div>
 

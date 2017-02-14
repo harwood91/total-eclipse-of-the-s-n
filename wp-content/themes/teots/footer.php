@@ -23,7 +23,7 @@
 					<a href="https://plus.google.com/u/0/115392298920541165730"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
 					<a href="https://www.instagram.com/totaleclipseofthesun/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 				</div>
-				<div class="col-sm-6">
+				<div class="col-sm-6 hidden-xs">
 					<div class="pageLinks">
 						<ul>
 							<li><a href="#">Home</a></li>
@@ -38,6 +38,21 @@
 
 					<div class="pageLinks">
 						<ul>
+							<li><a href="#">Terms & Conditions</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-6 visible-xs">
+					<div class="pageLinks">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">News</a></li>
+							<li><a href="#">Supporters</a></li>
+							<li><a href="#">Shop</a></li>
+							<li><a href="#">The Team</a></li>
+							<li><a href="#">Contact</a></li>
 							<li><a href="#">Terms & Conditions</a></li>
 							<li><a href="#">Privacy Policy</a></li>
 						</ul>

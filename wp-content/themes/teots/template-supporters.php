@@ -123,7 +123,7 @@ get_header(); ?>
                     <!--<div id="map"></div>-->
                     <!-- Map -->
                     <div class="supporter-map">
-                      <iframe id="supporter-map" src="https://www.google.com/maps/d/embed?mid=1h49XLR__T8r1rUvHHCoV8yVm10o" width="640" height="480"></iframe>
+                      <iframe style="width: 100%" id="supporter-map" src="https://www.google.com/maps/d/embed?mid=1h49XLR__T8r1rUvHHCoV8yVm10o" width="640" height="480"></iframe>
                     </div>
                   </div>
                 </div>
@@ -149,7 +149,7 @@ get_header(); ?>
 
                 </div>
                 <div class="col-sm-4">
-                  <img src="http://placehold.it/350x150">
+                  <img class="img-responsive hidden-xs" src="http://placehold.it/350x150">
                 </div>
               </div>
             </div>

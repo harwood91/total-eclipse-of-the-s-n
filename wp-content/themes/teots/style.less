@@ -1,7 +1,30 @@
+/*
+Theme Name: 	Total Eclipse of The S*n
+Description: 	Custom TEOTS theme
+Author: 		Andrew Harwood
+*/
+
+@import "variables.less";
+
 h1, h2, h3 {
   text-decoration: underline;
   color:#ff0000;
   font-weight: bold;
+}
+
+@media (max-width: @mobileUpperWidth) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+
+  }
+
+  h3 {
+
+  }
+
 }
 
 p, h1, h2, h3{
@@ -46,10 +69,18 @@ a.teotsButton {
   border-bottom: solid 2px #000000;
 
   img {
-    height: 150px;
-    width: auto;
-    margin: 20px;
-    float: left;
+
+    @media(max-width:@tabletLowerWidth){
+      margin: 20px auto;
+      display: block;
+    }
+
+    @media (min-width: @tabletLowerWidth) {
+      height: 150px;
+      width: auto;
+      margin: 20px;
+      float: left;
+    }
   }
 
   ul.navigation {
@@ -77,32 +108,75 @@ a.teotsButton {
 
   div.navWrapper {
 
-    display: inline-block;
+    @media (max-width: @tabletLowerWidth) {
+      clear: left;
+      .roundedCorners(5px) !important;
+      nav.navbar.navbar-default.center {
 
-    nav.navbar.navbar-default.center {
-      background-color: #ffff01;
-      border:none;
-      display: inline-block;
-      margin-top: 70px;
+        border:solid 2px #000000;
 
-      div.navbar-header {
 
-      }
+        div.navbar-header {
+          background-color: #FFFF01;
 
-      div.navbar-collapse {
+          a {
+            color: #000000;
+          }
 
-        ul.navbar-nav {
+          .navbar-toggle {
+            border: solid 2px #000000;
 
-          li {
+            .icon-bar {
+              background-color: #000000;
+            }
 
-            a {
+            &.collapsed {
+              background-color: #FFFF01;
+            }
 
-              color: #000000;
-              font-size: 18px;
-              font-weight: bold;
+            &:hover {
+              background-color: #FF0000;
 
-              &.current, &:hover {
-                color: #ff0000;
+              .icon-bar {
+                background-color: #FFFFFF;
+              }
+
+            }
+
+            &:focus {
+              background-color: #FF0000;
+
+              .icon-bar {
+                background-color: #FFFFFF;
+              }
+            }
+
+          }
+
+
+        }
+
+        div.navbar-collapse {
+          background-color: #FFFF01;
+          border-top:solid 2px #000000;
+
+          ul.navbar-nav {
+
+            background-color: #FFFF01;
+
+            li {
+
+              background-color: #FFFF01;
+
+              a {
+
+                color: #000000;
+
+                &.current, &:hover {
+                  background-color: #FF0000;
+                  color: #FFFFFF;
+                }
+
               }
 
             }
@@ -113,6 +187,48 @@ a.teotsButton {
 
       }
 
+
+    }
+
+    @media (min-width: @tabletLowerWidth) {
+
+      display: inline-block;
+
+      nav.navbar.navbar-default.center {
+        background-color: #ffff01;
+        border:none;
+        display: inline-block;
+        margin-top: 70px;
+
+        div.navbar-header {
+
+        }
+
+        div.navbar-collapse {
+
+          ul.navbar-nav {
+
+            li {
+
+              a {
+
+                color: #000000;
+                font-size: 18px;
+                font-weight: bold;
+
+                &.current, &:hover {
+                  color: #ff0000;
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
     }
 
   }
@@ -172,27 +288,53 @@ div.mainPage {
 
 div.topSection {
 
-  padding: 40px 0;
+  @media (max-width: @mobileUpperWidth) {
+    padding: 20px 0;
+  }
+
+  @media (min-width: @tabletLowerWidth){
+    padding: 40px 0;
+  }
+
   //background:url(img/taxi.jpg) top center no-repeat;
   background-color: #ff0000;
   border-bottom: solid 2px #000000;
 
   p.quote{
-    color: #ffffff;
-    font-size: 30px;
-    //font-style: italic;
-    font-weight: bold;
+
+    @media (max-width: @tabletLowerWidth) {
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    @media (min-width: @tabletLowerWidth) and (max-width: @tabletUpperWidth) {
+      color: #ffffff;
+      font-size: 24px;
+      //font-style: italic;
+      font-weight: bold;
+    }
+
+    @media (min-width: @desktopMediumLowerWidth) {
+      color: #ffffff;
+      font-size: 30px;
+      //font-style: italic;
+      font-weight: bold;
+    }
+
+
   }
 }
 
 div.homeAbout {
-  padding: 40px 0;
   background-color: #ffffff;
 
-  h1 {
-    text-decoration: underline;
-    color:#ff0000;
-    font-weight: bold;
+  @media (max-width: @mobileUpperWidth) {
+    padding: 0 10px 10px;
+  }
+
+  @media (min-width: @tabletLowerWidth){
+    padding: 40px 0;
   }
 
   img {
@@ -202,13 +344,14 @@ div.homeAbout {
 }
 
 div.homeWhy {
-  padding: 40px 0;
   background-color: #F2F2F2;
 
-  h1 {
-    text-decoration: underline;
-    color:#ff0000;
-    font-weight: bold;
+  @media (max-width: @mobileUpperWidth) {
+    padding: 0 10px 10px;
+  }
+
+  @media (min-width: @tabletLowerWidth){
+    padding: 40px 0;
   }
 
   img {
@@ -218,14 +361,16 @@ div.homeWhy {
 }
 
 div.homeInvolved {
-  padding: 40px 0;
   background-color: #ffffff;
-  text-align: center;
 
-  h1 {
-    text-decoration: underline;
-    color:#ff0000;
-    font-weight: bold;
+  @media (max-width: @mobileUpperWidth) {
+    padding: 0 10px 10px;
+    text-align: left;
+  }
+
+  @media (min-width: @tabletLowerWidth){
+    padding: 40px 0;
+    text-align: center;
   }
 
   div.threePart {
@@ -233,6 +378,7 @@ div.homeInvolved {
     padding: 10px;
     border-radius: 10px;
     border: solid 2px #000000;
+    text-align: center;
 
     h3 {
       font-weight: bold;
@@ -242,6 +388,10 @@ div.homeInvolved {
       border: solid 2px #000000;
     }
 
+    @media (max-width: @mobileUpperWidth) {
+      margin: 20px 0;
+    }
+
 
   }
 
@@ -249,8 +399,15 @@ div.homeInvolved {
 
 div.homeMedia{
 
-  padding: 40px 0;
   background-color: #F2F2F2;
+
+  @media (max-width: @mobileUpperWidth) {
+    padding: 0 10px 10px;
+  }
+
+  @media (min-width: @tabletLowerWidth){
+    padding: 40px 0;
+  }
 
 
   div.latestNews {
@@ -488,12 +645,6 @@ div.supportersHead{
   padding: 40px 0;
   background-color: #FFFFFF;
 
-  h1 {
-    text-decoration: underline;
-    color:#ff0000;
-    font-weight: bold;
-  }
-
   p {
     font-size: 16px;
   }
@@ -717,11 +868,25 @@ footer {
 
   div.pageLinks {
 
-    padding: 20px 0;
+    @media (max-width: @mobileUpperWidth) {
+      padding: 0;
+    }
+
+    @media (min-width: @mobileUpperWidth) {
+      padding: 20px 0;
+    }
+
+
 
     ul {
 
       list-style-type: none;
+
+      @media (max-width: @mobileUpperWidth) {
+        padding: 10px 0;
+        margin: 10px 0;
+      }
+
 
       li {
 
